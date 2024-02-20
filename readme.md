@@ -9,3 +9,14 @@ This is a repository for a REST API tutorial using Node, Express, Typescript & M
 ```git
 git clone https://github.com/ElazzouziHassan/Rest-api-ts.git 
 ```
+- 2 : run 
+```git 
+npm install
+```
+ - 3 : config mongoDB : inside `src/index.ts`: add `const MONGO_URL = 'your mongodb URL';`
+
+ - 4 : run 
+
+ ```git
+ npm start
+ ```
