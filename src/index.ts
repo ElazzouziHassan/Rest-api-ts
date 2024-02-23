@@ -4,9 +4,9 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
-import dotenv from 'dotenv'
-
+import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import router from './router';
 
 dotenv.config()
 const app = express();
@@ -32,3 +32,5 @@ const MONGODB_URL = "mongodb+srv://ezhassaninfo:"+process.env.DB_PASSWORD+"@clus
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URL);
 mongoose.connection.on('error', (error: Error) => console.log(error));
+
+app.use('/', router())
